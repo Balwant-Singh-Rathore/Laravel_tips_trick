@@ -1,0 +1,9 @@
+The data types have to match:
+
+// [1, 2]
+->whereJsonContains('players', 1)   // Works.
+->whereJsonContains('players', '1') // Doesn't work.
+
+// ["1", "2"]
+->whereJsonContains('players', '1') // Works.
+->whereJsonContains('players', 1)   // Doesn't work.
